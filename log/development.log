@@ -1,0 +1,5 @@
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-07-23 12:12:31) [GET]
+Rendering main/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/]
