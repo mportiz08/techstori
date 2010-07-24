@@ -11,7 +11,9 @@ $(document).ready(function() {
     console.log("scroll function called");
     var target = $('#right li:first');
     target.slideUp(1000, function() {
+      var old = "<li>" + target.html() + "</li>";
       target.remove();
+      $('#right ul').append(old);
     });
     counter = setTimeout(scroll, 3000);
   }
