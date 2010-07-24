@@ -5,17 +5,14 @@ $(document).ready(function() {
     $('#right ul').prepend('<%= escape_javascript(display(tweet)) %>');
   <% end %>
   
-  startTimer();
-  
-  
-  function startTimer() {
-    counter = setTimeout(scroll(), 2000);
-  }
+  scroll();
   
   function scroll() {
+    console.log("scroll function called");
     var target = $('#right li:first');
     target.slideUp(1000, function() {
-      target.detach();
+      target.remove();
     });
+    counter = setTimeout(scroll, 3000);
   }
 });
