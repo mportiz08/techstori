@@ -1,5 +1,21 @@
 $(document).ready(function() {
+  var counter;
+  
   <% @tweets.each do |tweet| %>
     $('#right ul').prepend('<%= escape_javascript(display(tweet)) %>');
   <% end %>
+  
+  startTimer();
+  
+  
+  function startTimer() {
+    counter = setTimeout(scroll(), 2000);
+  }
+  
+  function scroll() {
+    var target = $('#right li:first');
+    target.slideUp(1000, function() {
+      target.detach();
+    });
+  }
 });
