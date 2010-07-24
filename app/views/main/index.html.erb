@@ -2,6 +2,9 @@
 
 <% content_for :head do %>
 <script type="text/javascript">
+  var counter;
+  var running = 0;
+  
   $(document).ready(function() {
     resizePanel();
     $(window).resize(resizePanel);
