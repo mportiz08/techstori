@@ -8,7 +8,6 @@ $(document).ready(function() {
   scroll();
   
   function scroll() {
-    console.log("scroll function called");
     var target = $('#right li:first');
     target.slideUp(1000, function() {
       var old = "<li>" + target.html() + "</li>";
