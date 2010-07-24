@@ -27,7 +27,7 @@ class TwitterSearch
   def process(response)
     response["results"].each do |tweet|
       msg = tweet["text"]
-      @results << tweet["text"] unless msg.include?(LINK)
+      @results << msg unless msg.include?(LINK)
     end
   end
 end
