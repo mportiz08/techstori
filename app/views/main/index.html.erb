@@ -5,6 +5,9 @@
   $(document).ready(function() {
     resizePanel();
     $(window).resize(resizePanel);
+    $('#left a').click(function() {
+      $.post("<%= root_url %>", { keyword: $(this).text() }, null, "script");
+    });
   });
   
   function resizePanel() {

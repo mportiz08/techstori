@@ -38,7 +38,8 @@ html, body {
   height: 100%;
 }
 
-a, a:visited, a:active { color: #000; text-decoration: none; }
+a, a:visited, a:active { color: #333; text-decoration: none; }
+a:hover { color: #000; }
 h1 { font-size: 56px; font-weight: normal; }
 h2 { font-size: 36px; font-weight: normal; }
 h3 { font-size: 24px; font-weight: normal; }
@@ -70,7 +71,7 @@ h3 { font-size: 24px; font-weight: normal; }
 
 #left {
   float: left;
-  width: 150px;
+  width: 200px;
 }
 
 #right {
