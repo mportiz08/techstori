@@ -8,11 +8,21 @@
   $(document).ready(function() {
     resizePanel();
     $(window).resize(resizePanel);
+    
+    $('#about').hide();
+    $('#about-link').toggle(function() {
+      $('#about').fadeIn();
+    }, function() {
+      $('#about').fadeOut();
+    });
+    
+    // use ajax to reload page with tweets containing the keyword
     $('#left a').click(function() {
       $.post("<%= root_url %>", { keyword: $(this).text() }, null, "script");
     });
   });
   
+  // hack to dynamically resize right panel
   function resizePanel() {
     $('#right').width( $(document).width() - $('#left').width() );
   }
