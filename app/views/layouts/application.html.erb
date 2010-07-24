@@ -2,13 +2,23 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title><%= yield :title %> | vid.gm</title>
+  <title><%= yield :title %></title>
   <%= stylesheet_link_tag "main" %>
-  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>-->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <%= javascript_include_tag "application" %>
   <%= yield :head %>
 </head>
 <body>
-
+  <div id="container">
+    <div class="panel" id="left">
+      <div id="keywords">
+        <h2>apple</h2>
+        <h2>microsoft</h2>
+        <h2>google</h2>
+      </div>
+    </div>
+    <div class="panel" id="right"></div>
+    <div class="clear"></div>
+  </div>
 </body>
 </html>

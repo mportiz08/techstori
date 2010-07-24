@@ -1,2 +1,14 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<% content_for :title do %>techstori<% end %>
+
+<% content_for :head do %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    resizePanel();
+    $(window).resize(resizePanel);
+  });
+  
+  function resizePanel() {
+    $('#right').width( $(document).width() - $('#left').width() );
+  }
+</script>
+<% end %>
