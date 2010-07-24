@@ -81,3 +81,7 @@ h3 { font-size: 24px; font-weight: normal; }
 #keywords {
   margin-top: 200px;
 }
+
+#right h1 {
+  display: inline;
+}

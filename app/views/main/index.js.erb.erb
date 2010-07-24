@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  $('#right').html('<%= escape_javascript(@keyword) %>');
+  <% @tweets.each do |tweet| %>
+    $('#right ul').prepend('<%= escape_javascript(display(tweet)) %>');
+  <% end %>
 });
