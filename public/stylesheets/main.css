@@ -80,7 +80,11 @@ h3 { font-size: 24px; font-weight: normal; }
 }
 
 #keywords {
-  margin: 200px 0 0 25px;
+  margin: 175px 0 0 25px;
+}
+
+#keywords li {
+  padding-bottom: 25px;
 }
 
 #right h1 {
@@ -95,3 +99,20 @@ h3 { font-size: 24px; font-weight: normal; }
 #right li {
   padding: 20px 0;
 }
+
+#keywords a:hover {
+ background-color: #f9f9f9;
+}
+
+.apple a:hover, h1.apple {
+  color: #999;
+}
+
+.microsoft a:hover, h1.microsoft {
+  color: #0cade3;
+}
+
+.google a:hover .g,  h1.google  .g  { color: #4974e4; }
+.google a:hover .oe, h1.google  .oe { color: #eb2834; }
+.google a:hover .o,  h1.google  .o  { color: #f8a509; }
+.google a:hover .l,  h1.google  .l  { color: #04a616; }
