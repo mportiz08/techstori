@@ -1,19 +1,28 @@
 $(document).ready(function() {
   var counter;
+  var running = 0;
   
   <% @tweets.each do |tweet| %>
     $('#right ul').prepend('<%= escape_javascript(display(tweet)) %>');
   <% end %>
+  $('#right ul').hide();
+  $('#right ul').fadeIn();
   
   scroll();
   
   function scroll() {
-    var target = $('#right li:first');
-    target.slideUp(1000, function() {
-      var old = "<li>" + target.html() + "</li>";
-      target.remove();
-      $('#right ul').append(old);
-    });
+    if(running) {
+      var target = $('#right li:first');
+      target.slideUp(1000, function() {
+        var old = "<li>" + target.html() + "</li>";
+        target.remove();
+        $('#right ul').append(old);
+      });
+    }
+    
     counter = setTimeout(scroll, 3000);
+    if(!running) {
+      running = 1;
+    }
   }
 });
