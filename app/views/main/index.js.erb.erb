@@ -1,4 +1,5 @@
 clearTimeout(counter);
+$('#right li').remove();
 
 <% @tweets.each do |tweet| %>
   $('#right ul').prepend('<%= escape_javascript(display(tweet)) %>');
